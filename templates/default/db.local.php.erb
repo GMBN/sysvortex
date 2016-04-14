@@ -11,6 +11,7 @@ return array(
         'connection' => array(
             'orm_default' => array(
                 'params' => array(
+                    'driverClass' => 'Doctrine\DBAL\Driver\PDOPgSql\Driver',
                     'host'     => '<%= @environment_variables["RDS_HOSTNAME"] %>',
                     'port'     => '<%= @environment_variables["RDS_PORT"] %>',
                     'user'     => '<%= @environment_variables["RDS_USERNAME"] %>',
