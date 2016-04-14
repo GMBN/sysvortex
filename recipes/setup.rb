@@ -5,7 +5,7 @@ when 'debian'
   package 'php5-intl' do
     action :install
   end
-  package 'pdo_pgsql' do
+  package 'php_pgsql' do
     action :install
   end
    package 'tzdata' do
