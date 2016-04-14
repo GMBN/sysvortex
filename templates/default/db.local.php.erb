@@ -1,0 +1,27 @@
+<?php
+return array(
+    'doctrine' => array(
+        'configuration' => array(
+            'orm_default' => array(
+                'query_cache' => 'array',
+                'result_cache' => 'array',
+                'metadata_cache' => 'array'
+            )
+        ),
+        'connection' => array(
+            'orm_default' => array(
+                'params' => array(
+                    'host'     => '<%= @environment_variables["RDS_HOSTNAME"] %>',
+                    'port'     => '<%= @environment_variables["RDS_PORT"] %>',
+                    'user'     => '<%= @environment_variables["RDS_USERNAME"] %>',
+                    'password' => '<%= @environment_variables["RDS_PASSWORD"] %>',
+                    'dbname'   => '<%= @environment_variables["RDS_DB_NAME"] %>',
+                    'charset' => 'UTF8',
+                    'driverOptions' => array(
+                        'charset' => 'UTF8'
+                    )
+                )
+            )
+        )
+    )
+);
