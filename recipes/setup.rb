@@ -6,7 +6,7 @@ execute "update-php56" do
   command "add-apt-repository ppa:ondrej/php5-5.6 -y "
   action :run
 end
-apt_update do
+apt_update 'all platforms' do
   action :update
 end
 package 'python-software-properties' do
