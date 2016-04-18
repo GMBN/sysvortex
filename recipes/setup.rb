@@ -13,13 +13,13 @@ end
  package 'python-software-properties' do
     action :install
   end
-  package 'php56-intl' do
+  package 'php5-intl' do
     action :install
   end
-  package 'php56-pgsql' do
+  package 'php5-pgsql' do
     action :install
   end
-  package 'php56' do
+  package 'php5' do
     action :install
   end
    package 'tzdata' do
