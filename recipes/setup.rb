@@ -5,7 +5,7 @@ when 'debian'
 bash "update-php56" do
   user "root"
   code <<-EOH 
-  add-apt-repository ppa:ondrej/php5-5.6 
+  add-apt-repository ppa:ondrej/php5-5.6 -y 
   apt-get update
    EOH
   action :run
