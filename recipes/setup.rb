@@ -10,9 +10,16 @@ bash "update-php56" do
    EOH
   action :run
 end
- package 'python-software-properties' do
+package 'python-software-properties' do
     action :install
   end
+bash "apt-get update" do
+  user "root"
+  code <<-EOH 
+  apt-get update
+   EOH
+  action :run
+end
   package 'php5-intl' do
     action :install
   end
