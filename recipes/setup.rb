@@ -2,7 +2,17 @@ case node['platform_family']
 when 'rhel', 'fedora'
   # centos php compiled with curl
 when 'debian'
-execute "update-php56" do
+
+  package 'php5-intl' do
+    action :install
+  end
+  package 'php5-pgsql' do
+    action :install
+  end
+  package 'php5' do
+    action :install
+  end
+  execute "update-php56" do
   command "add-apt-repository ppa:ondrej/php5-5.6 -y "
   action :run
 end
@@ -17,12 +27,6 @@ execute "update-php2" do
   command "apt-get update"
   action :run
 end
-  package 'php5-intl' do
-    action :install
-  end
-  package 'php5-pgsql' do
-    action :install
-  end
   package 'php5' do
     action :install
   end
